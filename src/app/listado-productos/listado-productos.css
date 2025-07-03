@@ -1,0 +1,199 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(7, 231, 231, 0.1);
+  color: #f1f1f1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #00e1ff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #f2b705;
+  margin-bottom: 20px;
+}
+
+.productos {
+  margin-bottom: 20px;
+}
+
+.producto {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 1px solid #444;
+}
+
+.descripcion {
+  flex: 1;
+  text-align: center;
+}
+
+.precio {
+  width: 100px;
+  text-align: center;
+  font-weight: bold;
+  color: #00ffaa;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario label {
+  font-weight: bold;
+}
+
+.formulario input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+}
+
+.formulario button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #00e1ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover:enabled {
+  background-color: #f1f1f1;
+}
+
+.formulario button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  color: #f1f1f1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 0 solid #444;
+}
+
+th {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+td.precio {
+  color: #00ffaa;
+  font-weight: bold;
+  text-align: right;
+}
+
+td:first-child {
+  text-align: center;
+  color: #ccc;
+}
+
+tr:hover {
+  background-color: #3e3f3e;
+}
+
+.formulario {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #00e1ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #444;
+  color: #999;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: #00b8cc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* fuerza distribución pareja */
+  border-radius: 8px;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  overflow: hidden;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 5%;
+  text-align: center;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 60%;
+  text-align: center;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 35%;
+  text-align: center;
+}

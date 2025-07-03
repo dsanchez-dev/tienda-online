@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ListadoProductos } from "./listado-productos/listado-productos";
+import { ListadoProductos } from './listado-productos/listado-productos';
 
 @Component({
   selector: 'app-root',
   imports: [ListadoProductos],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected titulo = 'Tienda Online';
+
+  currentYear: number = new Date().getFullYear();
 }

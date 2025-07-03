@@ -1,4 +1,36 @@
-<h3 class="text-center">Listado de Productos</h3>
-<app-producto/>
-<app-producto/>
-<app-producto/>
+<div class="container">
+    <h2 class="subtitle">Lista de Productos</h2>
+    <hr />
+
+    <div class="productos text-center">
+        <table>
+            <th>
+                <tr>
+                    <th>#</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+            </th>
+            <tbody>
+                <tr *ngFor="let item of productos; let i = index" class="producto">
+                    <td>{{ i + 1 }}</td>
+                    <td class="descripcion">{{ item.descripcion }}</td>
+                    <td class="precio">${{ item.precio }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="formulario">
+        <label for="nuevoProducto">Agregar Nuevo Producto</label>
+        <input type="text" id="nuevoProducto" class="text-center" [(ngModel)]="nuevoProducto"
+            placeholder="Agregar producto" />
+
+        <input type="number" id="precio" class="text-center" [(ngModel)]="nuevoPrecio" placeholder="Agregar Precio" />
+
+        <button (click)="AgregarProducto()"
+            [disabled]="!nuevoProducto || nuevoPrecio === null || nuevoPrecio === undefined">
+            Agregar
+        </button>
+
+    </div>
+</div>

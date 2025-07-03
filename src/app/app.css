@@ -1,0 +1,36 @@
+.footer {
+  margin-top: 60px;
+  padding: 30px 20px;
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #333;
+  border-radius:5px 5px 0 0;
+  box-shadow: 0 -2px 8px rgba(0, 255, 255, 0.08);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer .brand {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer .author {
+  font-style: italic;
+  color: #999;
+}
+
+.footer a {
+  color: #00ffaa;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
