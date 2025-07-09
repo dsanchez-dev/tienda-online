@@ -20,17 +20,6 @@
             </tbody>
         </table>
     </div>
-    <div class="formulario">
-        <label for="nuevoProducto">Agregar Nuevo Producto</label>
-        <input type="text" id="nuevoProducto" class="text-center" [(ngModel)]="nuevoProducto"
-            placeholder="Agregar producto" />
+    <app-formulario (nuevoProducto)="agregarProducto($event)" />
 
-        <input type="number" id="precio" class="text-center" [(ngModel)]="nuevoPrecio" placeholder="Agregar Precio" />
-
-        <button (click)="AgregarProducto()"
-            [disabled]="!nuevoProducto || nuevoPrecio === null || nuevoPrecio === undefined">
-            Agregar
-        </button>
-
-    </div>
 </div>
