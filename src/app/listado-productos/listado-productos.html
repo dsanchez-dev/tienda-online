@@ -1,25 +1,28 @@
-<div class="container">
-    <h2 class="subtitle">Lista de Productos</h2>
-    <hr />
+<div class="container mt-5">
+    <h2 class="text-center mb-4 text-light">📦 Lista de Productos</h2>
+    <hr class="border-light" />
 
-    <div class="productos text-center">
-        <table>
-            <th>
+    <div class="table-responsive rounded">
+        <table class="table table-dark table-hover table-striped table-bordered align-middle text-center shadow">
+            <thead class="table-secondary text-dark">
                 <tr>
-                    <th>#</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Precio</th>
                 </tr>
-            </th>
+            </thead>
             <tbody>
-                <tr *ngFor="let item of productos; let i = index" class="producto">
+                <tr *ngFor="let productoElemento of productosOrdenados; let i = index; trackBy: trackByProducto"
+                    data-bs-toggle="tooltip" [attr.title]="'Producto: ' + productoElemento.descripcion"
+                    aria-label="Producto en lista">
+
                     <td>{{ i + 1 }}</td>
-                    <td class="descripcion">{{ item.descripcion }}</td>
-                    <td class="precio">${{ item.precio }}</td>
+                    <td>{{ productoElemento.descripcion }}</td>
+                    <td class="text-success" >${{ productoElemento.precio }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <app-formulario (nuevoProducto)="agregarProducto($event)" />
 
+    <app-formulario (nuevoProducto)="agregarProducto($event)" />
 </div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Producto } from '../producto/producto.model';
 import { Formulario } from '../formulario/formulario';
+import { ProductoComponent } from '../producto/producto';
 
 @Component({
   selector: 'app-listado-productos',
@@ -26,4 +27,14 @@ export class ListadoProductos {
   ordenarPorPrecioDesc() {
     this.productos.sort((a, b) => b.precio - a.precio);
   }
+
+  get productosOrdenados(): Producto[] {
+    return this.productos.slice().sort((a, b) => b.precio - a.precio); // Mayor a menor
+  }
+
+  trackByProducto(index: number, item: Producto): any {
+    return item.descripcion; // o cualquier ID único si tienes uno
+  }
+  
+
 }

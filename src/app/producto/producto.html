@@ -1,3 +1,4 @@
-<div class="container">
-  <p>{{ descripcion }} , Precio ${{ precio}}</p>
-</div>
+<li class="list-group-item d-flex justify-content-between align-items-center bg-dark text-light border-secondary">
+  <span class="fw-semibold">{{ producto.descripcion }}</span>
+  <span class="badge bg-success rounded-pill">${{ producto.precio }}</span>
+</li>
